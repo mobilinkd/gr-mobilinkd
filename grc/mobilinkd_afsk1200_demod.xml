@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!--
+###################################################
+## AFSK1200 Demodulator
+###################################################
+ -->
+<block>
+        <name>AFSK1200 Decoder</name>
+        <key>afsk1200_demod</key>
+        <category>Modulators</category>
+        <import>import mobilinkd</import>
+        <make>mobilinkd.afsk1200_demod($rate)</make>
+        <param>
+                <name>Rate</name>
+                <key>rate</key>
+                <value>samp_rate</value>
+                <type>int</type>
+        </param>
+        <sink>
+                <name>in</name>
+                <type>float</type>
+        </sink>
+        <source>
+                <name>out</name>
+                <type>byte</type>
+        </source>
+</block>

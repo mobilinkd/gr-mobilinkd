@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!--
+###################################################
+## HDLC Framer
+###################################################
+ -->
+<block>
+        <name>HDLC Framer</name>
+        <key>hdlc_framer</key>
+        <category>Digital</category>
+        <import>import mobilinkd</import>
+        <!-- make>mobilinkd.hdlc_framer()</make -->
+        <make>mobilinkd.hdlc_framer($(id)_msgq_out)</make>
+        <param>
+                <name>Pass All</name>
+                <key>pass_all</key>
+                <value>pass_all</value>
+                <type>bool</type>
+        </param>
+        <sink>
+                <name>in</name>
+                <type>byte</type>
+        </sink>
+        <source>
+                <name>out</name>
+                <type>msg</type>
+        </source>
+</block>
